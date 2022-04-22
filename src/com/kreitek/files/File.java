@@ -18,7 +18,6 @@ public class File extends FileSystemItemBase implements FileSystem {
     @Override
     public void open() {
         isOpen = true;
-        // Aquí vendría código que actualizaría también this.size
     }
 
     @Override
