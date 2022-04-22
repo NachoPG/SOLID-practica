@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Directory extends FileSystemItemBase implements DirectorySystem {
 
-    //    private static final String NO_ES_VALIDO_PARA_DIRECTORIOS = "No es válido para directorios";
     private final List<FileSystemItemBase> files;
 
     public Directory(String name) {
@@ -14,6 +13,7 @@ public class Directory extends FileSystemItemBase implements DirectorySystem {
     }
 
 
+    @Override
     public List<FileSystemItemBase> listFiles() {
         return files;
     }
@@ -35,27 +35,4 @@ public class Directory extends FileSystemItemBase implements DirectorySystem {
         return totalSize;
     }
 
-//    @Override
-//    public void open() {
-//        throw new UnsupportedOperationException(NO_ES_VALIDO_PARA_DIRECTORIOS);
-//    }
-//
-//    @Override
-//    public void setPosition(int numberOfBytesFromBeginning) {
-//        throw new UnsupportedOperationException(NO_ES_VALIDO_PARA_DIRECTORIOS);
-//    }
-//
-//    @Override
-//    public byte[] read(int numberOfBytesToRead) {
-//        throw new UnsupportedOperationException(NO_ES_VALIDO_PARA_DIRECTORIOS);
-//    }
-//
-//    @Override
-//    public void write(byte[] buffer) {
-//        throw new UnsupportedOperationException(NO_ES_VALIDO_PARA_DIRECTORIOS);
-//    }
-//
-//    public void close() {
-//        throw new UnsupportedOperationException(NO_ES_VALIDO_PARA_DIRECTORIOS);
-//    }
 }

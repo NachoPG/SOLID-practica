@@ -1,24 +1,11 @@
 package com.kreitek.service;
 
-import com.kreitek.files.Directory;
-import com.kreitek.files.DirectorySystem;
-import com.kreitek.files.File;
 import com.kreitek.files.FileSystemItemBase;
 
 public class FileManager {
 
     public static int calculateSize(FileSystemItemBase fileSystemItem) {
-        int totalSize = 0;
-
-        if (fileSystemItem instanceof File) {
-            totalSize = fileSystemItem.getSize();
-        } else if (fileSystemItem instanceof Directory) {
-            for (DirectorySystem item : fileSystemItem.listFiles()) {
-                totalSize += calculateSize(item);
-            }
-        }
-
-        return totalSize;
+        return fileSystemItem.getSize();
     }
 
 //    public static int calculateSize(List<FileSystemItem> files) {
